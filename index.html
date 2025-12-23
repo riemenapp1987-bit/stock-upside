@@ -50,7 +50,7 @@
             
             try {
                 const symbols = tickers.join(",");
-                const quoteUrl = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${symbols}`;
+                const quoteUrl = `https://finance.yahoo.com/_finance_d/_m_yf/quote?symbols=${symbols}`;
                 const quoteResp = await fetch(quoteUrl);
                 if (!quoteResp.ok) throw new Error("Network error on quotes");
                 const quoteData = await quoteResp.json();
@@ -133,3 +133,4 @@
     </script>
 </body>
 </html>
+
